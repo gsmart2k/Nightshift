@@ -1,0 +1,30 @@
+{
+  "quotes": [
+    {
+      "symbol": "TSLAUSDT",
+      "last": 364.97,
+      "bid": 364.96,
+      "ask": 364.98,
+      "timestamp": 1789816911071,
+      "spread": 0.005479902457746842
+    },
+    {
+      "symbol": "NVDAUSDT",
+      "last": 222.27,
+      "bid": 222.26,
+      "ask": 222.27,
+      "timestamp": 1789816911071,
+      "spread": 0.0044991339167297275
+    },
+    {
+      "symbol": "AAPLUSDT",
+      "last": 335.34,
+      "bid": 335.33,
+      "ask": 335.34,
+      "timestamp": 1789816911071,
+      "spread": 0.002982092534328628
+    }
+  ],
+  "source": "https://api.bitget.com/api/v2/mix/market/tickers?productType=USDT-FUTURES",
+  "retrievedAt": "2026-09-19T11:41:12.784166+00:00"
+}
