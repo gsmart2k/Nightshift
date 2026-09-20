@@ -46,7 +46,21 @@ cp .env.example .env
 pnpm dev
 ```
 
-Set provider values in your local `.env` if you want model-backed research. Leave credentials empty for the labeled deterministic mode. Use `pnpm build` for the Worker build. Server deployment requires environment secrets on your hosting provider. The owner-specific Sites manifest is excluded from this public source snapshot. Production secrets and uploaded screenshots are excluded. Runtime behavior was tested in Sites; a clean external deployment has not been independently verified.
+Set provider values in your local `.env` if you want model-backed research. Leave credentials empty for the labeled deterministic mode. Use `pnpm build` for the Next.js production build. Server deployment requires environment secrets on your hosting provider. The owner-specific Sites manifest is excluded from this public source snapshot. Production secrets and uploaded screenshots are excluded. The GitHub version now uses standard Next.js and Node.js server environment variables. A production build, TypeScript checks, homepage HTTP 200, deterministic research results and invalid-input rejection passed locally on September 20. Vercel deployment and provider-backed research on Vercel remain to be verified.
 
 ## Alternative provider
 Set AI_PROVIDER=gemini and GEMINI_API_KEY as a server secret to use Google Gemini. GEMINI_MODEL defaults to gemini-3.6-flash. Requests use the fixed Google OpenAI-compatible endpoint. No silent cross-provider fallback is performed. Model key creation and account eligibility must be validated before declaring AI operational.
+
+## Deploy to Vercel
+
+Import `gsmart2k/Nightshift` into Vercel. The included `vercel.json` selects Next.js, a frozen-lockfile install, and the production build. Keep the root directory at the repository root.
+
+Set these server-side environment variables in Vercel before deploying:
+
+```text
+AI_PROVIDER=gemini
+GEMINI_MODEL=gemini-3.6-flash
+GEMINI_API_KEY=<your private key>
+```
+
+Never prefix the key with `NEXT_PUBLIC_` or commit it. The app runs in explicitly labeled deterministic mode without a configured key. Ensure the production URL is accessible without Vercel login before submission. Test a research question after deployment; provider eligibility and quota still apply. The existing Sites deployment remains a separate backup.

@@ -68,4 +68,4 @@ No automatic overnight monitoring, order execution, persistent portfolio, user s
 
 ## Technical verification
 
-Baseline arithmetic, reduction boundaries, cash-only positions, finite/nonnegative inputs, guardrail boundaries and keyword retrieval passed automated assertions. TypeScript and production builds passed in the original Sites environment. UI checks covered portfolio editing, worsening scenarios, verification flags and source ranking. Clean external deployment and independent public visitor access remain to be verified.
+Baseline arithmetic, reduction boundaries, cash-only positions, finite/nonnegative inputs, guardrail boundaries and keyword retrieval passed automated assertions. TypeScript and production builds passed in the original Sites environment. UI checks covered portfolio editing, worsening scenarios, verification flags and source ranking. The standard Next.js migration also passed its production build, TypeScript validation, homepage HTTP 200, deterministic research API and invalid-input HTTP 400 checks on September 20. Vercel deployment, model access there and independent public visitor access remain to be verified.
