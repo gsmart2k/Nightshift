@@ -2,7 +2,7 @@
 
 An overnight portfolio stress-testing workspace for Bitget AI Hackathon S2, AI Trading Desk / Decision Stress Testing.
 
-[Live demo](https://nightshift-lab.digitaledge00.chatgpt.site) · [Judge walkthrough](docs/JUDGE_WALKTHROUGH.md)
+[Live demo](https://nightshift-sooty-one.vercel.app) · [Judge walkthrough](docs/JUDGE_WALKTHROUGH.md)
 
 ## Built
 - Editable unlevered NVDA, TSLA, AAPL dollar exposures plus cash.
@@ -32,7 +32,7 @@ The chart interpolates the endpoint, not a predicted or historical price series.
 ## Validation
 Financial/boundary assertions passed during implementation: default ($12,000 capital, -$970 hold, -$703 reduced, $24 costs), zero/full reduction, cash-only, source/depth/spread gates, opposite-direction shock, negative/nonfinite input rejection. TypeScript and production build passed. Browser scenario escalation, source flag, research question retrieval and generated deterministic brief checked. Download click exercised, but the cloud browser did not expose a download event; receipt of the file is not verified. WebMCP registration is feature-detected; the available browser does not support modelContext, so WebMCP validation is unavailable.
 
-No user study, real investment performance or backtest is claimed. A deployed Gemini research request passed with HTTP 200 and the expected numerical outputs. Qwen testing was blocked by provider activation/KYC. The demo audience is public; an automated unauthenticated check returned HTTP 403, so independent visitor access still needs confirmation. The X post and competition form are not yet submitted.
+No user study, real investment performance or backtest is claimed. A deployed Gemini research request passed with HTTP 200 and the expected numerical outputs. Qwen testing was blocked by provider activation/KYC. The Vercel production homepage returned HTTP 200 without authentication on September 20. A public Gemini research POST also returned HTTP 200 with the expected baseline figures. The X post and competition form are not yet submitted.
 
 ## Submission thesis
 Self-directed traders with concentrated US technology exposures cannot continuously monitor overnight events. NIGHTSHIFT turns a vague question into inspectable scenarios, source limitations, cost-aware comparisons and a human-reviewed night plan. Its hypothesis is that a source-grounded stress workflow improves task completion and exposure understanding; this remains to be tested.
@@ -46,7 +46,7 @@ cp .env.example .env
 pnpm dev
 ```
 
-Set provider values in your local `.env` if you want model-backed research. Leave credentials empty for the labeled deterministic mode. Use `pnpm build` for the Next.js production build. Server deployment requires environment secrets on your hosting provider. The owner-specific Sites manifest is excluded from this public source snapshot. Production secrets and uploaded screenshots are excluded. The GitHub version now uses standard Next.js and Node.js server environment variables. A production build, TypeScript checks, homepage HTTP 200, deterministic research results and invalid-input rejection passed locally on September 20. Vercel deployment and provider-backed research on Vercel remain to be verified.
+Set provider values in your local `.env` if you want model-backed research. Leave credentials empty for the labeled deterministic mode. Use `pnpm build` for the Next.js production build. Server deployment requires environment secrets on your hosting provider. The owner-specific Sites manifest is excluded from this public source snapshot. Production secrets and uploaded screenshots are excluded. The GitHub version now uses standard Next.js and Node.js server environment variables. A production build, TypeScript checks, homepage HTTP 200, deterministic research results and invalid-input rejection passed locally on September 20. Vercel production access and provider-backed Gemini research passed HTTP checks on September 20.
 
 ## Alternative provider
 Set AI_PROVIDER=gemini and GEMINI_API_KEY as a server secret to use Google Gemini. GEMINI_MODEL defaults to gemini-3.6-flash. Requests use the fixed Google OpenAI-compatible endpoint. No silent cross-provider fallback is performed. Model key creation and account eligibility must be validated before declaring AI operational.

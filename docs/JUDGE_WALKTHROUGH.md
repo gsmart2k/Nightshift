@@ -1,6 +1,6 @@
 # NIGHTSHIFT: complete research-task walkthrough
 
-[Open demo](https://nightshift-lab.digitaledge00.chatgpt.site)
+[Open demo](https://nightshift-sooty-one.vercel.app)
 
 Track: AI Trading Desk / Decision Stress Testing. This is a reproducible walkthrough of the implemented research task, not a record of executed trades.
 
@@ -68,4 +68,4 @@ No automatic overnight monitoring, order execution, persistent portfolio, user s
 
 ## Technical verification
 
-Baseline arithmetic, reduction boundaries, cash-only positions, finite/nonnegative inputs, guardrail boundaries and keyword retrieval passed automated assertions. TypeScript and production builds passed in the original Sites environment. UI checks covered portfolio editing, worsening scenarios, verification flags and source ranking. The standard Next.js migration also passed its production build, TypeScript validation, homepage HTTP 200, deterministic research API and invalid-input HTTP 400 checks on September 20. Vercel deployment, model access there and independent public visitor access remain to be verified.
+Baseline arithmetic, reduction boundaries, cash-only positions, finite/nonnegative inputs, guardrail boundaries and keyword retrieval passed automated assertions. TypeScript and production builds passed in the original Sites environment. UI checks covered portfolio editing, worsening scenarios, verification flags and source ranking. The standard Next.js migration also passed its production build, TypeScript validation, homepage HTTP 200, deterministic research API and invalid-input HTTP 400 checks on September 20. On September 20, the public Vercel homepage returned HTTP 200 without authentication. A public research POST returned HTTP 200 in Gemini mode (gemini-3.6-flash), with −$970 holding impact, −$703 reduced impact and $24 costs. This verifies HTTP/API behavior; it is not a full visual browser test.
